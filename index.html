@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorriso Perfeito - Clínica Odontológica</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-inner">
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+                <span id="themeLabel">Escuro</span>
+            </button>
+            <div class="logo">
+                <i class="fa-solid fa-tooth logo-icon"></i>
+                <h1>Sorriso <strong>Perfeito</strong></h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+    
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="bem">Bem-vindo ao</p>
+                <h1>Sorriso Perfeito</h1>
+                <p class="desc">Cuidando do seu sorriso com carinho, tecnologia e dedicação. Agende sua consulta e
+                    transforme sua vida.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn-primary">Agendar Consulta</a>
+                    <button class="btn-dica" id="btnDica">
+                        <i class="fa-solid fa-lightbulb"></i> Dica do Dia
+                    </button>
+                </div>
+                <div class="dica-card" id="dicaCard" style="display:none;">
+                    <div class="dica-loading" id="dicaLoading">
+                        <i class="fa-solid fa-spinner fa-spin"></i> Buscando dica...
+                    </div>
+                    <div class="dica-content" id="dicaContent" style="display:none;">
+                        <i class="fa-solid fa-tooth dica-icon"></i>
+                        <p id="dicaTexto"></p>
+                        <button class="btn-nova-dica" onclick="buscarDica()">
+                            <i class="fa-solid fa-arrows-rotate"></i> Nova dica
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dente-circulo">
+                    <i class="fa-solid fa-tooth"></i>
+                    <p>+500 sorrisos transformados</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="servicos" id="servicos">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos tratamentos modernos para cuidar do seu sorriso</p>
+            </div>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Clareamento Dental</h3>
+                    <p>Deixe seu sorriso até 8 tons mais branco com nossa tecnologia a laser de última geração.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3>Ortodontia</h3>
+                    <p>Aparelhos fixos, móveis e alinhadores invisíveis para um sorriso alinhado e harmonioso.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Implante Dental</h3>
+                    <p>Recupere sua autoestima com implantes de titânio de alta qualidade e durabilidade.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <h3>Lente de Contato</h3>
+                    <p>Porcelanas ultrafinas que transformam o seu sorriso sem desgaste excessivo dos dentes.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>Odontopediatria</h3>
+                    <p>Cuidados especializados e acolhedores para a saúde bucal dos pequenos.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>Diagnóstico Digital</h3>
+                    <p>Raio-X digital e escaneamento 3D para um diagnóstico preciso e sem desconforto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIA -->
+        <section class="galeria" id="galeria">
+            <div class="section-header">
+                <h2>Galeria de Sorrisos</h2>
+                <p>Veja alguns dos resultados incríveis que já realizamos</p>
+            </div>
+            <div class="galeria-grid">
+                <div class="galeria-card">
+                    <div class="galeria-placeholder"><i class="fa-solid fa-tooth"></i><span>Antes &amp; Depois</span>
+                    </div>
+                    <p>Clareamento Dental</p>
+                </div>
+                <div class="galeria-card">
+                    <div class="galeria-placeholder"><i class="fa-solid fa-tooth"></i><span>Antes &amp; Depois</span>
+                    </div>
+                    <p>Lente de Contato</p>
+                </div>
+                <div class="galeria-card">
+                    <div class="galeria-placeholder"><i class="fa-solid fa-tooth"></i><span>Antes &amp; Depois</span>
+                    </div>
+                    <p>Implante Dental</p>
+                </div>
+                <div class="galeria-card">
+                    <div class="galeria-placeholder"><i class="fa-solid fa-tooth"></i><span>Antes &amp; Depois</span>
+                    </div>
+                    <p>Ortodontia</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="depoimentos" id="depoimentos">
+            <div class="section-header">
+                <h2>O que nossos pacientes dizem</h2>
+                <p>Histórias reais de quem transformou o sorriso conosco</p>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p>"O clareamento foi incrível! Em apenas uma sessão meu sorriso ficou visivelmente mais bonito. A
+                        equipe é super atenciosa e o ambiente é muito acolhedor."</p>
+                    <div class="paciente">
+                        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                        <div><strong>Ana Paula Silva</strong><span>Clareamento Dental</span></div>
+                    </div>
+                </div>
+                <div class="depoimento-card destaque">
+                    <div class="estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p>"Fiz meu implante aqui e o resultado superou todas as expectativas. Profissionais altamente
+                        qualificados, tecnologia de ponta e atendimento humanizado."</p>
+                    <div class="paciente">
+                        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                        <div><strong>Carlos Eduardo</strong><span>Implante Dental</span></div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
+                    <p>"As lentes de contato dental transformaram meu sorriso completamente. Me sinto muito mais
+                        confiante e recebo elogios todos os dias. Recomendo demais!"</p>
+                    <div class="paciente">
+                        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                        <div><strong>Mariana Costa</strong><span>Lente de Contato</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contato" id="contato">
+            <div class="contato-inner">
+                <div class="contato-info">
+                    <h2>Entre em Contato</h2>
+                    <p>Agende sua consulta ou tire suas dúvidas. Estamos aqui para ajudar você a conquistar o sorriso
+                        dos seus sonhos.</p>
+                    <ul class="info-list">
+                        <li><i class="fa-solid fa-location-dot"></i> Rua das Flores, 123 - Centro, São Paulo - SP</li>
+                        <li><i class="fa-solid fa-phone"></i> (11) 9 9999-9999</li>
+                        <li><i class="fa-solid fa-envelope"></i> contato@sorrisoperfeito.com.br</li>
+                        <li><i class="fa-solid fa-clock"></i> Seg–Sex: 8h–18h | Sáb: 8h–12h</li>
+                    </ul>
+                </div>
+                <div class="contato-form">
+                    <form id="contatoForm" novalidate>
+                        <div class="form-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                            <span class="erro" id="erroNome"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com">
+                            <span class="erro" id="erroEmail"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 9 0000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="servico">Serviço de interesse</label>
+                            <select id="servico" name="servico">
+                                <option value="">Selecione um serviço</option>
+                                <option>Clareamento Dental</option>
+                                <option>Ortodontia</option>
+                                <option>Implante Dental</option>
+                                <option>Lente de Contato</option>
+                                <option>Odontopediatria</option>
+                                <option>Diagnóstico Digital</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4"
+                                placeholder="Escreva sua mensagem..."></textarea>
+                            <span class="erro" id="erroMensagem"></span>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">
+                            Enviar Mensagem <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div id="sucessoMsg" class="sucesso-msg" style="display:none;">
+                            ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-tooth logo-icon"></i>
+                    <h2>Sorriso <strong>Perfeito</strong></h2>
+                </div>
+                <p>Cuidando do seu sorriso com carinho, tecnologia e dedicação.</p>
+                <div class="redes-sociais">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contato">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Rua das Flores, 123 - Centro<br>São Paulo - SP</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 9 9999-9999</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@sorrisoperfeito.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sorriso Perfeito. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="JS.js"></script>
+</body>
+
+</html>
